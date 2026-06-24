@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musikwunsch · Anna & André</title>
+<meta name="description" content="Sendet uns eure Lieblings-Songs für die Hochzeit von Anna & André.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23F5871F'/%3E%3Cpath%20d='M16%2025.5C16%2025.5%205.5%2019%205.5%2011.8C5.5%208.3%208%206%2011%206C13.2%206%2014.9%207.3%2016%209C17.1%207.3%2018.8%206%2021%206C24%206%2026.5%208.3%2026.5%2011.8C26.5%2019%2016%2025.5%2016%2025.5Z'%20fill='none'%20stroke='%23fff'%20stroke-width='2'%20stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#F5871F;
+  --orange-deep:#E5751A;
+  --pink:#E5318C;
+  --pink-light:#F498C4;
+  --magenta:#C026A3;
+  --bordeaux:#1F1A17;
+  --cream:#FAFAF8;
+  --white:#ffffff;
+  --ink:#1F1A17;
+  --ink-soft:#6A645E;
+  --line:#ECE9E4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);
+  line-height:1.65;min-height:100vh;display:flex;flex-direction:column;
+}
+strong{font-weight:600}
+
+/* Language switch */
+.lang-switch{position:fixed;top:1.1rem;right:1.3rem;z-index:200;display:flex;align-items:center;gap:.35rem;
+  background:rgba(255,255,255,.8);backdrop-filter:blur(10px);border:1px solid var(--line);
+  border-radius:50px;padding:.35rem .7rem}
+.lang-btn{background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:.74rem;font-weight:600;
+  letter-spacing:.12em;color:var(--ink-soft);padding:.15rem .25rem;transition:color .2s;line-height:1}
+.lang-btn.active,.lang-btn:hover{color:var(--orange-deep)}
+.lang-sep{color:var(--ink-soft);opacity:.5;font-size:.74rem}
+
+/* Header band */
+.hero{
+  background:linear-gradient(165deg,#F8923A 0%,var(--orange) 45%,var(--orange-deep) 100%);
+  color:var(--white);text-align:center;padding:5rem 1.5rem 4rem;
+}
+.hero .eyebrow{font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:1rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,6vw,4rem);font-weight:600;letter-spacing:-.01em;color:var(--white);line-height:1.05}
+.hero p{font-size:1.05rem;color:rgba(255,255,255,.92);margin-top:1.2rem;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7}
+.hero .back-link{display:inline-flex;align-items:center;gap:.4rem;color:rgba(255,255,255,.85);text-decoration:none;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin-bottom:2rem;transition:color .2s}
+.hero .back-link:hover{color:var(--white)}
+.hero .back-link svg{width:14px;height:14px;stroke:currentColor;stroke-width:2;fill:none}
+
+/* Main */
+main{flex:1;padding:3.5rem 1.5rem;max-width:680px;margin:0 auto;width:100%}
+
+/* Form card */
+.form-card{background:var(--white);border-radius:16px;padding:2.4rem 2rem;box-shadow:0 2px 14px rgba(20,18,16,.05)}
+.form-card h2{font-family:'Playfair Display',serif;color:var(--bordeaux);font-size:1.5rem;margin-bottom:.5rem}
+.form-intro{color:var(--ink-soft);margin-bottom:1.6rem;font-size:.97rem}
+.form-row{display:flex;gap:1rem;flex-wrap:wrap}
+.form-row > *{flex:1 1 200px}
+.form-field{margin-bottom:1.1rem;display:flex;flex-direction:column}
+.form-field label{font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+.form-field label .opt{color:var(--ink-soft);font-weight:400;letter-spacing:0;text-transform:none;margin-left:.3rem}
+.form-field input[type=text],.form-field input[type=url]{
+  border:1px solid rgba(20,18,16,.14);border-radius:10px;padding:.75rem .9rem;font:inherit;color:var(--ink);background:#fff;transition:border-color .2s,box-shadow .2s;width:100%;
+}
+.form-field input:focus{outline:none;border-color:var(--orange-deep);box-shadow:0 0 0 3px rgba(229,117,26,.14)}
+.form-hint{font-size:.8rem;color:var(--ink-soft);margin-top:.35rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+  background:var(--orange-deep);color:var(--white);
+  font-weight:600;letter-spacing:.06em;text-decoration:none;
+  padding:.85rem 2rem;border-radius:50px;font-size:.95rem;border:none;cursor:pointer;font-family:inherit;
+  transition:transform .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(229,117,26,.28)}
+.btn:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-ghost{background:transparent;color:var(--orange-deep);border:1px solid rgba(229,117,26,.4)}
+.btn-ghost:hover{background:rgba(229,117,26,.06);box-shadow:none}
+
+/* Status */
+.form-status{font-size:.95rem;margin-top:1.2rem;padding:.8rem 1.1rem;border-radius:10px;display:none;line-height:1.5}
+.form-status.show{display:block}
+.form-status.success{background:#f1e5d8;color:#7a5d2c;border:1px solid #e0d2b5}
+.form-status.error{background:#f5dcd0;color:#8a3d22;border:1px solid #e7baa5}
+
+/* Footer */
+footer{text-align:center;padding:3rem 1.5rem 4rem;color:var(--ink-soft);font-size:.85rem}
+footer .heart{color:var(--orange-deep)}
+footer a{color:var(--orange-deep);text-decoration:none;border-bottom:1px solid rgba(229,117,26,.3)}
+footer a:hover{border-color:var(--orange-deep)}
+</style>
+</head>
+<body>
+
+<div class="lang-switch" role="group" aria-label="Sprache / Language">
+  <button class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<header class="hero">
+  <a class="back-link" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+    <span data-en="Back to invitation">Zurück zur Einladung</span>
+  </a>
+  <div class="eyebrow"><span data-en="Music wishes">Musikwünsche</span></div>
+  <h1 data-en="Your songs for our day">Eure Songs für unseren Tag</h1>
+  <p data-en="Got a track you'd love to hear at our wedding? Send it our way — we'll add it to the playlist.">Habt ihr einen Song, den wir auf unserer Hochzeit unbedingt hören sollten? Schickt ihn uns — wir nehmen ihn in die Playlist mit auf.</p>
+</header>
+
+<main>
+  <div class="form-card">
+    <h2 data-en="Send a music wish">Musikwunsch senden</h2>
+    <p class="form-intro" data-en="Title and artist are enough. If you have a link, even better.">Titel und Interpret reichen. Wenn ihr einen Link dazu habt, umso besser.</p>
+
+    <form id="form-musik" action="https://formspree.io/f/xojojeqa" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Hochzeit Anna &amp; André — Musikwunsch">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="m-song"><span data-en="Song title">Songtitel</span></label>
+          <input type="text" id="m-song" name="Songtitel" required>
+        </div>
+        <div class="form-field">
+          <label for="m-artist"><span data-en="Artist">Interpret</span></label>
+          <input type="text" id="m-artist" name="Interpret" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="m-link"><span data-en="Link">Link</span> <span class="opt" data-en="(optional — Spotify, YouTube or Apple Music)">(optional — Spotify, YouTube oder Apple Music)</span></label>
+        <input type="url" id="m-link" name="Link" placeholder="https://…" inputmode="url">
+      </div>
+
+      <div class="form-field">
+        <label for="m-from"><span data-en="From">Von</span> <span class="opt" data-en="(optional — your name)">(optional — euer Name)</span></label>
+        <input type="text" id="m-from" name="Von">
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn" data-en="Send wish">Wunsch senden</button>
+        <a href="index.html" class="btn btn-ghost" data-en="Back">Zurück</a>
+      </div>
+
+      <p class="form-status" id="status-musik"
+         data-success-de="Vielen Dank — euer Song ist bei uns angekommen 🎶 Lust auf noch einen Wunsch? Einfach das Formular nochmal ausfüllen."
+         data-success-en="Thanks — we got your song 🎶 Got another one? Just fill in the form again."
+         data-error-de="Hoppla, das hat nicht geklappt. Bitte später nochmal versuchen oder kurz die Trauzeugen kontaktieren."
+         data-error-en="Oops, something went wrong. Please try again later or contact our witnesses."></p>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <p>Anna <span class="heart">♥</span> André · 05.09.2026 · Tabakschuppen Rheinstetten</p>
+  <p style="margin-top:.5rem"><a href="index.html" data-en="Back to the wedding page">Zurück zur Hochzeitsseite</a></p>
+</footer>
+
+<script>
+// ---------- Sprachumschalter DE/EN (matches index.html pattern) ----------
+(function(){
+  document.querySelectorAll('[data-en]').forEach(el=>{ el.setAttribute('data-de', el.textContent); });
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    const en = lang==='en';
+    document.querySelectorAll('[data-en]').forEach(el=>{
+      el.textContent = en ? el.getAttribute('data-en') : el.getAttribute('data-de');
+    });
+    document.querySelectorAll('.lang-btn').forEach(b=>{
+      const active = b.getAttribute('data-lang')===lang;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', active ? 'true':'false');
+    });
+    try{ localStorage.setItem('lang', lang); }catch(e){}
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(b=>{
+    b.addEventListener('click', ()=> setLang(b.getAttribute('data-lang')));
+  });
+
+  // Initial: from localStorage or browser
+  try{
+    const saved = localStorage.getItem('lang');
+    if(saved) setLang(saved);
+    else if(navigator.language && navigator.language.startsWith('en')) setLang('en');
+  }catch(e){}
+})();
+
+// ---------- Formspree submit handler ----------
+const isEN = () => document.documentElement.lang === 'en';
+
+const form = document.getElementById('form-musik');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const status = form.querySelector('.form-status');
+  const btn = form.querySelector('button[type=submit]');
+  const songInput = form.querySelector('input[name="Songtitel"]');
+  const artistInput = form.querySelector('input[name="Interpret"]');
+  if(!songInput.value.trim()){ songInput.focus(); return; }
+  if(!artistInput.value.trim()){ artistInput.focus(); return; }
+  const gotcha = form.querySelector('input[name="_gotcha"]');
+  if(gotcha && gotcha.value) return;
+
+  btn.disabled = true;
+  btn.style.opacity = '.6';
+  const origText = btn.textContent;
+  btn.textContent = isEN() ? 'Sending…' : 'Wird gesendet…';
+
+  const setStatus = (kind) => {
+    const key = kind === 'success'
+      ? (isEN() ? 'successEn' : 'successDe')
+      : (isEN() ? 'errorEn'   : 'errorDe');
+    status.textContent = status.dataset[key];
+    status.className = 'form-status show ' + kind;
+  };
+
+  try{
+    const res = await fetch(form.action, {
+      method:'POST', body:new FormData(form),
+      headers:{ 'Accept':'application/json' }
+    });
+    if(res.ok){ setStatus('success'); form.reset(); }
+    else { setStatus('error'); }
+  }catch(err){ setStatus('error'); }
+  finally{
+    btn.disabled = false;
+    btn.style.opacity = '';
+    btn.textContent = origText;
+  }
+});
+</script>
+
+</body>
+</html>
