@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anna & André · 05.09.2026</title>
+<title>Anna & André · Danke · 05.09.2026</title>
+<meta name="description" content="Danke an alle, die mit uns gefeiert haben — und an alle, die an uns gedacht haben. Anna & André, 05.09.2026, Tabakschuppen Rheinstetten.">
+<meta property="og:title" content="Anna & André · Danke">
+<meta property="og:description" content="An alle, die mit uns gefeiert haben — und an alle, die an uns gedacht haben.">
+<meta property="og:image" content="https://tabundtorte.de/img/wedding/01-hero.jpg">
+<meta property="og:url" content="https://tabundtorte.de/">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23F5871F'/%3E%3Cpath%20d='M16%2025.5C16%2025.5%205.5%2019%205.5%2011.8C5.5%208.3%208%206%2011%206C13.2%206%2014.9%207.3%2016%209C17.1%207.3%2018.8%206%2021%206C24%206%2026.5%208.3%2026.5%2011.8C26.5%2019%2016%2025.5%2016%2025.5Z'%20fill='none'%20stroke='%23fff'%20stroke-width='2'%20stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -300,6 +306,105 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
 .form-status.show{display:block}
 .form-status.success{background:#f1e5d8;color:#7a5d2c;border:1px solid #e0d2b5}
 .form-status.error{background:#f5dcd0;color:#8a3d22;border:1px solid #e7baa5}
+
+/* ---------- POST-WEDDING HERO (Danke) ---------- */
+.hero.post{
+  background:#1F1A17;min-height:100vh;position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem;
+}
+.hero.post .hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('img/wedding/01-hero.jpg');
+  background-size:cover;background-position:center 35%;
+  filter:brightness(.55) saturate(.95);
+}
+.hero.post::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(31,26,23,.35) 0%,rgba(31,26,23,.15) 40%,rgba(31,26,23,.65) 100%);
+}
+.hero.post .hero-content{position:relative;z-index:2;color:#fff;max-width:720px}
+.hero.post .hero-date-small{
+  font-family:'Playfair Display',serif;font-weight:500;
+  font-size:.95rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.78);
+  margin-bottom:1.5rem;
+}
+.hero.post .hero-script{
+  font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+  font-size:clamp(5rem,15vw,10rem);line-height:.95;letter-spacing:-.02em;
+  background:linear-gradient(120deg,#F498C4 0%,#E5318C 35%,#F5871F 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+}
+.hero.post .hero-names{
+  color:#fff;margin-top:1.4rem;font-size:clamp(1rem,2.4vw,1.35rem);
+}
+.hero.post .hero-sub{
+  color:rgba(255,255,255,.92);font-size:clamp(1rem,1.6vw,1.15rem);
+  max-width:540px;margin:1.8rem auto 2.6rem;line-height:1.65;
+}
+.hero.post .hero-cta{
+  display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;
+}
+.hero.post .hero-cta .btn{font-size:.92rem;padding:.95rem 1.9rem}
+.hero.post .btn-light{
+  background:rgba(255,255,255,.14);color:#fff !important;-webkit-text-fill-color:#fff;
+  border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(6px);
+}
+.hero.post .btn-light:hover{background:rgba(255,255,255,.22)}
+.hero.post .scroll-cue{color:rgba(255,255,255,.75)}
+
+/* ---------- MOMENTE / GALLERY ---------- */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;
+  max-width:1200px;margin:0 auto;
+}
+@media(max-width:860px){.gallery-grid{grid-template-columns:repeat(2,1fr);gap:.6rem}}
+@media(max-width:520px){.gallery-grid{grid-template-columns:1fr}}
+.gallery-item{
+  display:block;overflow:hidden;border-radius:14px;position:relative;cursor:pointer;
+  background:#eee;box-shadow:0 2px 14px rgba(20,18,16,.08);
+  transition:transform .35s cubic-bezier(.2,.7,.3,1), box-shadow .35s ease;
+}
+.gallery-item img{
+  display:block;width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease,filter .35s ease;
+  aspect-ratio:1/1;
+}
+.gallery-item.landscape img{aspect-ratio:4/3}
+.gallery-item.portrait img{aspect-ratio:3/4}
+.gallery-item:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(20,18,16,.14)}
+.gallery-item:hover img{transform:scale(1.03);filter:brightness(1.03)}
+
+/* Gallery CTA block */
+.gallery-cta{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem;
+  margin-top:3rem;
+}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox{
+  position:fixed;inset:0;z-index:300;background:rgba(31,26,23,.94);
+  display:none;align-items:center;justify-content:center;padding:3rem 1.5rem;
+  animation:fadeIn .2s ease;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.lightbox .lb-close{
+  position:absolute;top:1.1rem;right:1.3rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+  color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.3rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:background .2s;
+}
+.lightbox .lb-close:hover{background:rgba(255,255,255,.22)}
+.lightbox .lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;
+  width:46px;height:46px;border-radius:50%;cursor:pointer;font-size:1.6rem;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:background .2s;
+}
+.lightbox .lb-nav:hover{background:rgba(255,255,255,.22)}
+.lightbox .lb-prev{left:1.2rem}
+.lightbox .lb-next{right:1.2rem}
+@media(max-width:620px){.lightbox .lb-nav{width:38px;height:38px}.lightbox .lb-prev{left:.5rem}.lightbox .lb-next{right:.5rem}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 </style>
 </head>
 <body>
@@ -317,82 +422,74 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#ankommen" data-en="Arrival">Ankommen</a></li>
-      <li><a href="#feiern" data-en="Celebration">Feiern</a></li>
-      <li><a href="#wissenswertes" data-en="Good to know">Wissenswertes</a></li>
-      <li><a href="#ausklang" data-en="Wind-down">Ausklang</a></li>
+      <li><a href="#momente" data-en="Moments">Momente</a></li>
+      <li><a href="#tag" data-en="The day">Der Tag</a></li>
+      <li><a href="#location" data-en="Venue">Location</a></li>
       <li><a href="#kontakt" data-en="Contact">Kontakt</a></li>
     </ul>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-date display">
-    <span class="d-day gradient-text">05</span>
-    <span class="d-mon gradient-text">SEP</span>
-    <span class="d-yr gradient-text">26</span>
+<!-- HERO · DANKE -->
+<section class="hero post">
+  <div class="hero-bg" role="img" aria-label="Anna &amp; André am Hochzeitstag"></div>
+  <div class="hero-content">
+    <div class="hero-date-small" data-en="05 · 09 · 2026">05 · 09 · 2026</div>
+    <div class="hero-script" data-en="Thank you">Danke.</div>
+    <div class="hero-names names">Anna &amp; André</div>
+    <p class="hero-sub" data-en="To everyone who celebrated with us — and to everyone who thought of us.">An alle, die mit uns gefeiert haben — und an alle, die an uns gedacht haben.</p>
+    <div class="hero-cta">
+      <a class="btn btn-pink" href="https://photos.app.goo.gl/wxLBZJbyMkBnaWoPA" target="_blank" rel="noopener" data-en="View album">Album ansehen</a>
+      <a class="btn btn-light" href="https://photos.app.goo.gl/95Z8Cffaxurs2JMH6" target="_blank" rel="noopener" data-en="Share your photos">Eigene Fotos beisteuern</a>
+    </div>
   </div>
-  <div class="hero-names names">Anna &amp; André</div>
-  <div class="hero-heart">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28.8C16 28.8 2.4 21 2.4 11.6C2.4 6.9 6 3.6 10.2 3.6C12.9 3.6 15 5.2 16 6.9C17 5.2 19.1 3.6 21.8 3.6C26 3.6 29.6 6.9 29.6 11.6C29.6 21 16 28.8 16 28.8Z" fill="#C026A3"/></svg>
-  </div>
-  <div class="scroll-cue" data-en="scroll">scrollen</div>
+  <div class="scroll-cue" data-en="moments">Momente</div>
 </section>
 
-<!-- ANKOMMEN -->
-<section id="ankommen">
-  <div class="wrap">
-    <div class="section-head reveal" style="margin-bottom:2.5rem">
-      <div class="eyebrow" data-en="Where we celebrate">Hier feiern wir</div>
-      <h2 class="section-title" data-en="Tabakschuppen Rheinstetten">Tabakschuppen Rheinstetten</h2>
-      <p class="loc-detail" data-en="Kraichgaustrasse 12 · 76287 Rheinstetten">Kraichgaustraße 12 · 76287 Rheinstetten</p>
-      <div class="loc-links">
-        <a class="text-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kraichgaustra%C3%9Fe+12,+76287+Rheinstetten" target="_blank" rel="noopener" data-en="Google Maps">Google Maps</a>
-        <a class="text-link" href="https://maps.apple.com/?daddr=Kraichgaustra%C3%9Fe+12,+76287+Rheinstetten" target="_blank" rel="noopener" data-en="Apple Maps">Apple Maps</a>
-        <a class="text-link" href="https://tabakschuppen.com/" target="_blank" rel="noopener" data-en="tabakschuppen.com">tabakschuppen.com</a>
-      </div>
-    </div>
-
-    <div class="map-wrap reveal">
-      <iframe loading="lazy" title="Tabakschuppen Rheinstetten" src="https://www.openstreetmap.org/export/embed.html?bbox=8.3053%2C48.9750%2C8.3153%2C48.9810&amp;layer=mapnik&amp;marker=48.978048%2C8.3103123"></iframe>
-    </div>
-
-    <div class="grid grid-2" style="margin-top:4rem">
-      <div class="card reveal">
-        <h3 data-en="Getting there & parking">Anreise und Parken</h3>
-        <ul class="facts">
-          <li><span class="fact-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17 10 8h4l3 9"/><path d="M10 8h5"/></svg></span><span data-en-html="<span class=&quot;term&quot;>On foot &amp; by bike</span> — if you can, come on foot or by bike. From Hey Lou Hotel it's a pleasant walk to the Tabakschuppen."><span class="term" data-en="On foot & by bike">Zu Fuß &amp; mit dem Rad</span> — wer kann, kommt gerne zu Fuß oder mit dem Fahrrad. Vom Hey Lou Hotel ist es ein angenehmer Spaziergang zum Tabakschuppen.</span></li>
-          <li><span class="fact-ic"><svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M4 13h16v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><circle cx="7.5" cy="15.5" r=".6" fill="currentColor" stroke="none"/><circle cx="16.5" cy="15.5" r=".6" fill="currentColor" stroke="none"/></svg></span><span data-en-html="<span class=&quot;term&quot;>By car</span> — you'll find parking on the streets around the Tabakschuppen."><span class="term" data-en="By car">Mit dem Auto</span> — rund um den Tabakschuppen findet ihr Parkmöglichkeiten in den umliegenden Straßen.</span></li>
-          <li><span class="fact-ic"><svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="13" rx="2"/><path d="M6 10h12"/><path d="M9 21l1.5-2"/><path d="M15 21l-1.5-2"/><circle cx="9" cy="14" r=".6" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r=".6" fill="currentColor" stroke="none"/></svg></span><span data-en-html="<span class=&quot;term&quot;>By public transport</span> — take the S2 to Forchheim Hallenbad, from there it's just a few minutes' walk."><span class="term" data-en="By public transport">Mit den Öffentlichen</span> — mit der S2 bis Forchheim Hallenbad, von dort sind es nur wenige Minuten zu Fuß.</span></li>
-          <li><span class="fact-ic"><svg viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M4 13h16v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M10 7V4h4v3"/></svg></span><span data-en-html="<span class=&quot;term&quot;>By taxi</span> — if you prefer, you can take a taxi. Taxi Ruf Karlsruhe: 0721 / 160200. <a class=&quot;text-link&quot; href=&quot;tel:+49721160200&quot;>Call</a>"><span class="term" data-en="By taxi">Mit dem Taxi</span> — wer möchte, kann auch ganz entspannt mit dem Taxi fahren. Taxi Ruf Karlsruhe: 0721 / 160200. <a class="text-link" href="tel:+49721160200" data-en="Call">Anrufen</a></span></li>
-        </ul>
-      </div>
-
-      <div class="card reveal">
-        <h3 data-en="Hey Lou Hotel Karlsruhe">Hey Lou Hotel Karlsruhe</h3>
-        <ul class="facts">
-          <li><span data-en-html="We've reserved a block of rooms at Hey Lou Hotel for you — bookable until <strong>31.08.2026</strong>.">Wir haben im Hey Lou Hotel ein Zimmerkontingent für euch reserviert — buchbar bis zum <strong>31.08.2026</strong>.</span></li>
-          <li><span data-en-html="<strong>€77.95</strong> per night/room without breakfast"><strong>77,95 €</strong> pro Nacht/Zimmer ohne Frühstück</span></li>
-          <li><span data-en-html="<strong>€19.95</strong> per person/day for breakfast (optional)"><strong>19,95 €</strong> pro Person/Tag für Frühstück (optional)</span></li>
-          <li><span data-en="Free cancellation until arrival day, 6 pm (credit card for guarantee only)">Kostenfreie Stornierung bis zum Anreisetag, 18:00 Uhr (Kreditkarte nur als Garantie)</span></li>
-          <li><span data-en="One night only is fine too — just mention it when booking.">Auch nur eine Nacht möglich — einfach bei der Buchung erwähnen.</span></li>
-          <li><span data-en-html="Best to call and mention the keyword <strong>„Hochzeit Hellmann“</strong>. Hey Lou Hotel: 0721 / 48070440. <a class=&quot;text-link&quot; href=&quot;tel:+4972148070440&quot;>Call</a>">Am einfachsten anrufen und das Stichwort <strong>„Hochzeit Hellmann“</strong> nennen. Hey Lou Hotel: 0721 / 48070440. <a class="text-link" href="tel:+4972148070440" data-en="Call">Anrufen</a></span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEIERN -->
-<section id="feiern" class="band-orange">
+<!-- MOMENTE / GALLERY -->
+<section id="momente">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-en="What to expect">Was euch erwartet</div>
+      <div class="eyebrow" data-en="Memories of the day">Erinnerungen vom Tag</div>
+      <h2 class="section-title" data-en="A few of our favourite moments">Ein paar Lieblingsmomente</h2>
+    </div>
+
+    <div class="gallery-grid reveal">
+      <div class="gallery-item landscape" data-src="img/wedding/02-trauung.jpg" data-caption="Trauung"><img loading="lazy" src="img/wedding/02-trauung.jpg" alt="Trauung"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/03-paar.jpg" data-caption="Anna &amp; André"><img loading="lazy" src="img/wedding/03-paar.jpg" alt="Anna und André"></div>
+      <div class="gallery-item landscape" data-src="img/wedding/04-gruppe.jpg" data-caption="Gruppenbild"><img loading="lazy" src="img/wedding/04-gruppe.jpg" alt="Gruppenbild"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/05-musik.jpg" data-caption="Live-Musik"><img loading="lazy" src="img/wedding/05-musik.jpg" alt="Live-Musik"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/06-schild.jpg" data-caption="Anna &amp; André Schild"><img loading="lazy" src="img/wedding/06-schild.jpg" alt="Namensschild"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/07-torte.jpg" data-caption="Hochzeitstorte"><img loading="lazy" src="img/wedding/07-torte.jpg" alt="Hochzeitstorte"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/08-anschnitt.jpg" data-caption="Tortenanschnitt"><img loading="lazy" src="img/wedding/08-anschnitt.jpg" alt="Tortenanschnitt"></div>
+      <div class="gallery-item landscape" data-src="img/wedding/09-terrasse.jpg" data-caption="Terrasse am Abend"><img loading="lazy" src="img/wedding/09-terrasse.jpg" alt="Terrasse am Abend"></div>
+      <div class="gallery-item portrait" data-src="img/wedding/10-paar-nah.jpg" data-caption="Anna &amp; André"><img loading="lazy" src="img/wedding/10-paar-nah.jpg" alt="Anna und André"></div>
+    </div>
+
+    <div class="gallery-cta reveal">
+      <a class="btn btn-pink" href="https://photos.app.goo.gl/wxLBZJbyMkBnaWoPA" target="_blank" rel="noopener" data-en="See all photos">Alle Fotos ansehen</a>
+      <a class="btn" href="https://photos.app.goo.gl/95Z8Cffaxurs2JMH6" target="_blank" rel="noopener" data-en="Share your photos">Eure Fotos teilen</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Foto-Ansicht">
+  <button class="lb-close" id="lbClose" aria-label="Schließen">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Zurück">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Weiter">›</button>
+</div>
+
+<!-- DER TAG -->
+<section id="tag" class="band-orange">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="How the day unfolded">Wie der Tag verlief</div>
       <h2 class="section-title" data-en="The day">Der Tag</h2>
     </div>
 
-    <p class="lead reveal" data-en="We'll keep the fuss short — the day can be all the longer for it.">Das Tamtam halten wir kurz. Der Tag darf umso länger werden.</p>
+    <p class="lead reveal" data-en="A quick look back at the day — no fuss, just a lot of good moments.">Ein kleiner Rückblick auf unseren Tag — ohne Tamtam, mit vielen schönen Momenten.</p>
 
     <div class="timeline reveal">
       <div class="t-item"><span class="t-time">14:00</span><div class="t-body"><span class="t-name" data-en="Arrival">Ankommen</span><div class="t-desc" data-en="Arrive nice and relaxed.">Kommt ganz entspannt an.</div></div></div>
@@ -405,165 +502,23 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
       <div class="t-item"><span class="t-time">∞</span><div class="t-body"><span class="t-name" data-en="After hours">After Hour</span><div class="t-desc" data-en="Whoever's still up for it moves on with us.">Wer noch kann, zieht mit uns weiter.</div></div></div>
     </div>
 
-    <div class="day-notes reveal">
-      <div class="day-note">
-        <span class="day-note-label" data-en="Programme">Programm</span>
-        <p data-en="We're looking forward to a relaxed day without a big programme — no games, no activities, no spontaneous speeches. Good food, cold drinks and time with you are all we need. If you do have an idea, please get in touch with our witnesses.">Wir freuen uns auf einen entspannten Tag ohne großes Rahmenprogramm — keine Spiele, keine Aktionen, keine spontanen Reden. Gutes Essen, kalte Getränke und Zeit mit euch reichen uns völlig. Wer trotzdem eine Idee hat, meldet sich bitte bei unseren Trauzeugen.</p>
-      </div>
-      <div class="day-note">
-        <span class="day-note-label" data-en="Dress code">Dresscode</span>
-        <p data-en="There's no dress code. Wear whatever makes you feel comfortable.">Es gibt keinen Dresscode. Zieht an, worin ihr euch wohlfühlt.</p>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ESSEN UND TRINKEN -->
-<section id="essen" style="padding-bottom:4rem">
+<!-- LOCATION -->
+<section id="location">
   <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-en="Something for everyone">Für jeden Geschmack</div>
-      <h2 class="section-title" data-en="Food and drinks">Essen und Trinken</h2>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="feature-col">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2"/><path d="M5 11v11"/><path d="M16 2a3 3 0 0 0-3 3v6h3"/><path d="M16 2v20"/></svg></span>
-        <h3 data-en="Food">Essen</h3>
-        <p data-en="Food is taken care of from the afternoon until late at night. No one goes home hungry.">Vom Nachmittag bis spät in die Nacht ist für Essen gesorgt. Hungrig nach Hause muss niemand.</p>
-      </div>
-      <div class="feature-col">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h14l-1 7a6 6 0 0 1-12 0Z"/><path d="M12 16v5"/><path d="M8 21h8"/></svg></span>
-        <h3 data-en="Drinks">Getränke</h3>
-        <p data-en="No one will go thirsty either. With and without alcohol, hot and cold — there's everything.">Verdursten muss auch keiner. Mit und ohne Alkohol, warm und kalt ist alles dabei.</p>
+    <div class="section-head reveal" style="margin-bottom:2.5rem">
+      <div class="eyebrow" data-en="Where we celebrated">Hier haben wir gefeiert</div>
+      <h2 class="section-title" data-en="Tabakschuppen Rheinstetten">Tabakschuppen Rheinstetten</h2>
+      <p class="loc-detail" data-en="Kraichgaustrasse 12 · 76287 Rheinstetten">Kraichgaustraße 12 · 76287 Rheinstetten</p>
+      <div class="loc-links">
+        <a class="text-link" href="https://tabakschuppen.com/" target="_blank" rel="noopener" data-en="tabakschuppen.com">tabakschuppen.com</a>
       </div>
     </div>
 
-    <div class="form-card reveal">
-      <h3 data-en="Allergies, intolerances or preferences?">Allergien, Unverträglichkeiten oder Wünsche?</h3>
-      <p class="form-intro" data-en="So everyone leaves happy and well-fed — a quick note helps us with the planning.">Damit wir alle satt und glücklich machen — eine kurze Info hilft uns bei der Planung.</p>
-      <form id="form-essen" action="https://formspree.io/f/mkoyjyeo" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Hochzeit Anna &amp; André — Essen / Allergien">
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="essen-name" data-en="Name">Name</label>
-            <input type="text" id="essen-name" name="Name" required>
-          </div>
-          <div class="form-field" style="flex:0 1 130px">
-            <label for="essen-count" data-en="People">Personen</label>
-            <input type="number" id="essen-count" name="Personen" min="1" max="10" value="1">
-          </div>
-        </div>
-        <div class="form-field">
-          <label data-en="What applies to you? (multiple choice)">Was passt zu euch? (Mehrfachauswahl)</label>
-          <div class="checkbox-grid">
-            <label><input type="checkbox" name="Bedarf" value="Vegetarisch"> <span data-en="Vegetarian">Vegetarisch</span></label>
-            <label><input type="checkbox" name="Bedarf" value="Vegan"> <span data-en="Vegan">Vegan</span></label>
-            <label><input type="checkbox" name="Bedarf" value="Glutenfrei"> <span data-en="Gluten-free">Glutenfrei</span></label>
-            <label><input type="checkbox" name="Bedarf" value="Laktosefrei"> <span data-en="Lactose-free">Laktosefrei</span></label>
-            <label><input type="checkbox" name="Bedarf" value="Nussallergie"> <span data-en="Nut allergy">Nussallergie</span></label>
-            <label><input type="checkbox" name="Bedarf" value="Kein Schweinefleisch"> <span data-en="No pork">Kein Schweinefleisch</span></label>
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="essen-other" data-en="Anything else (optional)">Sonstiges (optional)</label>
-          <textarea id="essen-other" name="Sonstiges" rows="2"></textarea>
-        </div>
-        <div class="btn-row">
-          <button type="submit" class="btn btn-pink" data-en="Send wishes">Wünsche übermitteln</button>
-        </div>
-        <p class="form-status" id="status-essen"></p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- WISSENSWERTES -->
-<section id="wissenswertes" style="padding-top:3rem">
-  <div class="wrap">
-    <div class="section-head sub-head reveal" style="margin-bottom:3rem">
-      <div class="eyebrow" data-en="Good to know">Wissenswertes</div>
-    </div>
-
-    <!-- drei kompakte Wunschblöcke nebeneinander -->
-    <div class="grid grid-3" style="margin-bottom:1.4rem">
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M12 8S10.5 3 7.5 4.5 9 8 12 8Z"/><path d="M12 8s1.5-5 4.5-3.5S15 8 12 8Z"/></svg></span>
-        <h3 data-en="Gifts">Geschenke</h3>
-        <p data-en-html="We'll set up a card box and are happy about anything that fits through the slot. At <strong>9 × 150 mm</strong> it's rather small, though. How you solve that challenge is entirely up to you.">Wir stellen eine Kartenbox auf und freuen uns über alles, was durch den Schlitz passt. Der ist mit <strong>9 × 150 mm</strong> allerdings recht klein. Wie ihr diese Herausforderung löst, überlassen wir ganz euch.</p>
-      </div>
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
-        <h3 data-en="Photos">Fotos</h3>
-        <p data-en="We have someone taking photos at the ceremony. So feel free to simply experience the moment with us and keep your phones in your pockets — Dennis is taking care of the pictures.">Für die Trauung haben wir jemanden, der Fotos macht. Ihr dürft den Moment also gerne einfach mit uns erleben und die Handys in der Tasche lassen – um die Bilder kümmert sich Dennis.</p>
-      </div>
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
-        <h3 data-en="Music">Musik</h3>
-        <p data-en="We're looking forward to your song wishes. Send us your favourites — we'll add them to the playlist.">Wir freuen uns auf eure Musikwünsche. Schickt uns eure Lieblings-Songs — wir nehmen sie in die Playlist auf.</p>
-        <a class="btn btn-pink" href="musikwunsch.html" style="margin-top:auto;align-self:flex-start;font-size:.85rem;padding:.6rem 1.3rem" data-en="Send a music wish">Musikwunsch senden</a>
-      </div>
-    </div>
-
-    <!-- Familien: dreispaltig -->
-    <div class="section-head sub-head reveal" style="margin-top:5rem;margin-bottom:3rem">
-      <div class="eyebrow" data-en="For families">Für Familien</div>
-    </div>
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 20l5-9"/><path d="M9 11l8-4"/><path d="M4 20h6l-1-9"/><path d="M14 20l-2-7"/><path d="M11 13l8-3 1 10"/><circle cx="17" cy="5" r="2"/></svg></span>
-        <h3 data-en="Playground across">Spielplatz gegenüber</h3>
-        <p data-en="Right across from the Tabakschuppen there's a playground with plenty of room to run around.">Direkt gegenüber vom Tabakschuppen gibt es einen Spielplatz mit genügend Platz zum Toben.</p>
-      </div>
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="9" r="1" fill="currentColor" stroke="none"/><circle cx="9" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span>
-        <h3 data-en="Games on site">Spiele vor Ort</h3>
-        <p data-en="We'll bring along a few games for little breaks in between.">Für kleine Pausen zwischendurch bringen wir ein paar Spiele mit.</p>
-      </div>
-      <div class="card reveal">
-        <span class="ico"><svg viewBox="0 0 24 24"><path d="M10 3h4l-1 2h-2Z"/><path d="M9 5h6v3a3 3 0 0 1-1 2v9a2 2 0 0 1-2 2h0a2 2 0 0 1-2-2v-9a3 3 0 0 1-1-2Z"/><path d="M10 12h4"/><path d="M10 15h4"/></svg></span>
-        <h3 data-en="Changing room & privacy">Wickelraum &amp; Rückzug</h3>
-        <p data-en="For babies and toddlers there's a changing room and a quiet retreat.">Für Babys und Kleinkinder gibt es einen Wickelraum und einen ruhigen Rückzugsort.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUSKLANG -->
-<section id="ausklang" class="band-orange">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" data-en="Before you head home">Bevor es nach Hause geht</div>
-      <h2 class="section-title" data-en="Breakfast at Tabakschuppen">Frühstück im Tabakschuppen</h2>
-    </div>
-
-    <div class="band-intro reveal">
-      <p data-en="The Tabakschuppen also does an excellent breakfast, by the way. If you're not in a hurry on Sunday, feel free to join us — we'd love a relaxed send-off together.">Der Tabakschuppen macht übrigens auch ein hervorragendes Frühstück. Wer es am Sonntag nicht eilig hat, darf sich uns gerne anschließen – wir freuen uns auf einen gemeinsamen Ausklang.</p>
-      <p class="band-intro-detail" data-en="From 10:00 am · Sunday, 6 September · Tabakschuppen Rheinstetten">Ab 10:00 Uhr · Sonntag, 6. September · Tabakschuppen Rheinstetten</p>
-    </div>
-
-    <div class="form-card reveal">
-      <h3 data-en="Joining us for breakfast?">Kommt ihr zum Frühstück?</h3>
-      <p class="form-intro" data-en="A quick sign-up helps us plan. Thank you!">Eine kurze Anmeldung hilft uns bei der Planung. Danke!</p>
-      <form id="form-fruehstueck" action="https://formspree.io/f/xgodadbe" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Hochzeit Anna &amp; André — Frühstück Sonntag">
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="fr-name" data-en="Name">Name</label>
-            <input type="text" id="fr-name" name="Name" required>
-          </div>
-          <div class="form-field" style="flex:0 1 130px">
-            <label for="fr-count" data-en="People">Personen</label>
-            <input type="number" id="fr-count" name="Personen" min="1" max="10" value="2">
-          </div>
-        </div>
-        <div class="btn-row">
-          <button type="submit" class="btn btn-pink" data-en="Send">Anmeldung absenden</button>
-        </div>
-        <p class="form-status" id="status-fruehstueck"></p>
-      </form>
+    <div class="map-wrap reveal">
+      <iframe loading="lazy" title="Tabakschuppen Rheinstetten" src="https://www.openstreetmap.org/export/embed.html?bbox=8.3053%2C48.9750%2C8.3153%2C48.9810&amp;layer=mapnik&amp;marker=48.978048%2C8.3103123"></iframe>
     </div>
   </div>
 </section>
@@ -572,10 +527,10 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
 <section id="kontakt">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-en="For any questions">Für Fragen aller Art</div>
+      <div class="eyebrow" data-en="Still here for you">Weiterhin für euch da</div>
       <h2 class="section-title" data-en="Our witnesses">Unsere Trauzeugen</h2>
     </div>
-    <p class="lead reveal" data-en="For wishes, ideas, questions and everything else.">Für Wünsche, Ideen, Fragen und alles andere.</p>
+    <p class="lead reveal" data-en="Natascha and Chris still coordinate everything around photos, messages and anything that comes up.">Natascha und Chris sammeln auch nach dem Tag noch alles rund um Fotos, Nachrichten und was sonst noch kommt.</p>
     <div class="contact-grid">
       <div class="contact-card reveal">
         <div class="nm">Natascha Schmidt</div>
@@ -627,63 +582,53 @@ const onScroll=()=>{
 onScroll();
 window.addEventListener('scroll',onScroll,{passive:true});
 
-// Formulare — Submission an Formspree (AJAX, kein Page-Reload)
-const STATUS_MESSAGES = {
-  essen: {
-    success: { de: 'Vielen Dank — eure Info ist bei uns angekommen 💜', en: 'Thanks — we got your info 💜' },
-    error:   { de: 'Hoppla, das hat nicht geklappt. Bitte später nochmal versuchen oder kurz die Trauzeugen kontaktieren.', en: 'Oops, something went wrong. Please try again later or contact our witnesses.' }
-  },
-  fruehstueck: {
-    success: { de: 'Notiert! Wir freuen uns auf den gemeinsamen Sonntagmorgen 🥐', en: 'Got it! Looking forward to Sunday morning together 🥐' },
-    error:   { de: 'Hoppla, das hat nicht geklappt. Bitte später nochmal versuchen oder kurz die Trauzeugen kontaktieren.', en: 'Oops, something went wrong. Please try again later or contact our witnesses.' }
-  }
-};
+// Lightbox für die Galerie
+(function(){
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  if(!items.length) return;
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.getElementById('lbClose');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let idx = 0;
 
-const isEN = () => document.documentElement.lang === 'en';
+  const show = (i) => {
+    idx = (i + items.length) % items.length;
+    const src = items[idx].getAttribute('data-src');
+    const alt = items[idx].querySelector('img')?.alt || '';
+    lbImg.src = src;
+    lbImg.alt = alt;
+  };
+  const open = (i) => {
+    show(i);
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  const close = () => {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => { lbImg.src = ''; }, 200);
+  };
 
-function handleFormspreeSubmit(form, key){
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const status = form.querySelector('.form-status');
-    const btn = form.querySelector('button[type=submit]');
-    const nameInput = form.querySelector('input[name="Name"]');
-    if(nameInput && !nameInput.value.trim()){ nameInput.focus(); return; }
-    const gotcha = form.querySelector('input[name="_gotcha"]');
-    if(gotcha && gotcha.value) return;
-
-    btn.disabled = true;
-    btn.style.opacity = '.6';
-    const origText = btn.textContent;
-    btn.textContent = isEN() ? 'Sending…' : 'Wird gesendet…';
-
-    const setStatus = (kind) => {
-      const msg = STATUS_MESSAGES[key][kind];
-      status.textContent = isEN() ? msg.en : msg.de;
-      status.className = 'form-status show ' + kind;
-    };
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if(res.ok){ setStatus('success'); form.reset(); }
-      else { setStatus('error'); }
-    } catch(err){ setStatus('error'); }
-    finally {
-      btn.disabled = false;
-      btn.style.opacity = '';
-      btn.textContent = origText;
-    }
+  items.forEach((el, i) => {
+    el.addEventListener('click', () => open(i));
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(i); }
+    });
   });
-}
-
-const formEssen = document.getElementById('form-essen');
-if(formEssen) handleFormspreeSubmit(formEssen, 'essen');
-
-const formFr = document.getElementById('form-fruehstueck');
-if(formFr) handleFormspreeSubmit(formFr, 'fruehstueck');
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+  lbNext.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+  lb.addEventListener('click', (e) => { if(e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => {
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') show(idx - 1);
+    if(e.key === 'ArrowRight') show(idx + 1);
+  });
+})();
 
 // ---------- Sprachumschalter DE/EN ----------
 (function(){

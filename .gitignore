@@ -1,0 +1,8 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Working / temp
+_photos_source/
+_tmp/
+*.zip
