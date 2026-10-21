@@ -329,22 +329,24 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
   margin-bottom:1.5rem;
 }
 .hero.post .hero-script{
-  font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+  font-family:'Playfair Display',serif;font-weight:500;
   font-size:clamp(5rem,15vw,10rem);line-height:.95;letter-spacing:-.02em;
-  background:linear-gradient(120deg,#F498C4 0%,#E5318C 35%,#F5871F 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
-}
-.hero.post .hero-names{
-  color:#fff;margin-top:1.4rem;font-size:clamp(1rem,2.4vw,1.35rem);
+  color:#fff;
 }
 .hero.post .hero-sub{
   color:rgba(255,255,255,.92);font-size:clamp(1rem,1.6vw,1.15rem);
-  max-width:540px;margin:1.8rem auto 2.6rem;line-height:1.65;
+  max-width:540px;margin:1.8rem auto 2.4rem;line-height:1.65;
 }
 .hero.post .hero-cta{
-  display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;
+  display:grid;grid-template-columns:1fr 1fr;gap:.9rem;
+  max-width:460px;margin:0 auto;
 }
-.hero.post .hero-cta .btn{font-size:.92rem;padding:.95rem 1.9rem}
+.hero.post .hero-cta .btn{
+  font-size:.92rem;padding:.95rem 1.4rem;width:100%;text-align:center;
+}
+@media(max-width:540px){
+  .hero.post .hero-cta{grid-template-columns:1fr;max-width:320px}
+}
 .hero.post .btn-light{
   background:rgba(255,255,255,.14);color:#fff !important;-webkit-text-fill-color:#fff;
   border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(6px);
@@ -435,12 +437,11 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
   <div class="hero-bg" role="img" aria-label="Anna &amp; André am Hochzeitstag"></div>
   <div class="hero-content">
     <div class="hero-date-small" data-en="05 · 09 · 2026">05 · 09 · 2026</div>
-    <div class="hero-script" data-en="Thank you">Danke.</div>
-    <div class="hero-names names">Anna &amp; André</div>
-    <p class="hero-sub" data-en="To everyone who celebrated with us — and to everyone who thought of us.">An alle, die mit uns gefeiert haben — und an alle, die an uns gedacht haben.</p>
+    <div class="hero-script" data-en="Thank you.">Danke.</div>
+    <p class="hero-sub" data-en="To everyone who celebrated with us.">An alle, die mit uns gefeiert haben.</p>
     <div class="hero-cta">
       <a class="btn btn-pink" href="https://photos.app.goo.gl/wxLBZJbyMkBnaWoPA" target="_blank" rel="noopener" data-en="View album">Album ansehen</a>
-      <a class="btn btn-light" href="https://photos.app.goo.gl/95Z8Cffaxurs2JMH6" target="_blank" rel="noopener" data-en="Share your photos">Eigene Fotos beisteuern</a>
+      <a class="btn btn-light" href="https://photos.app.goo.gl/95Z8Cffaxurs2JMH6" target="_blank" rel="noopener" data-en="Share photos">Fotos beisteuern</a>
     </div>
   </div>
   <div class="scroll-cue" data-en="moments">Momente</div>
@@ -450,7 +451,7 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
 <section id="momente">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-en="Memories of the day">Erinnerungen vom Tag</div>
+      <div class="eyebrow" data-en="Memories that stay">Erinnerungen, die bleiben</div>
       <h2 class="section-title" data-en="A few of our favourite moments">Ein paar Lieblingsmomente</h2>
     </div>
 
@@ -485,11 +486,11 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
 <section id="tag" class="band-orange">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow" data-en="How the day unfolded">Wie der Tag verlief</div>
+      <div class="eyebrow" data-en="5 September 2026">05. September 2026</div>
       <h2 class="section-title" data-en="The day">Der Tag</h2>
     </div>
 
-    <p class="lead reveal" data-en="A quick look back at the day — no fuss, just a lot of good moments.">Ein kleiner Rückblick auf unseren Tag — ohne Tamtam, mit vielen schönen Momenten.</p>
+    <p class="lead reveal" data-en="From the ceremony to the after hour.">Von der Trauung bis zur After Hour.</p>
 
     <div class="timeline reveal">
       <div class="t-item"><span class="t-time">14:00</span><div class="t-body"><span class="t-name" data-en="Arrival">Ankommen</span><div class="t-desc" data-en="Arrive nice and relaxed.">Kommt ganz entspannt an.</div></div></div>
@@ -506,7 +507,7 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
 </section>
 
 <!-- LOCATION -->
-<section id="location">
+<section id="location" style="padding-bottom:3rem">
   <div class="wrap">
     <div class="section-head reveal" style="margin-bottom:2.5rem">
       <div class="eyebrow" data-en="Where we celebrated">Hier haben wir gefeiert</div>
@@ -530,7 +531,7 @@ footer .f-date{font-size:.85rem;letter-spacing:.2em;margin-top:.8rem;opacity:.8}
       <div class="eyebrow" data-en="Still here for you">Weiterhin für euch da</div>
       <h2 class="section-title" data-en="Our witnesses">Unsere Trauzeugen</h2>
     </div>
-    <p class="lead reveal" data-en="Natascha and Chris still coordinate everything around photos, messages and anything that comes up.">Natascha und Chris sammeln auch nach dem Tag noch alles rund um Fotos, Nachrichten und was sonst noch kommt.</p>
+    <p class="lead reveal" data-en="Natascha and Chris continue to collect photos, videos, and anything else still to come.">Natascha und Chris sammeln weiterhin Fotos, Videos und alles, was noch kommt.</p>
     <div class="contact-grid">
       <div class="contact-card reveal">
         <div class="nm">Natascha Schmidt</div>
